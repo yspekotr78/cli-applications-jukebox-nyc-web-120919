@@ -28,6 +28,7 @@ def help
   puts "- exit : exits this program"
 end
 
+def find_song()
 
 def play(songs)
   puts "Please enter a song name or number:"
@@ -36,9 +37,6 @@ def play(songs)
   output = songs.find do |track|
     track.start_with?(entry) || entry.to_i - 1 == songs.index(track)
   end
-  counter = 0
-  #output = ""
-  
   if output
     puts "Playing #{output}"
   else
