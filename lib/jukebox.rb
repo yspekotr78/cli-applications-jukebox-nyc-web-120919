@@ -34,7 +34,7 @@ def play(songs)
   entry = gets.strip
   #binding.pry
   output = songs.find do |track|
-    track.start_with?(input) || input.to_i - 1 == songs.index(track)
+    track.start_with?(entry) || entry.to_i - 1 == songs.index(track)
   end
   counter = 0
   #output = ""
