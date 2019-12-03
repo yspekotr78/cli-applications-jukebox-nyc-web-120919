@@ -32,9 +32,9 @@ def find_song(entry,songs)
   songs.find do |track|
     # "song title                   track #      index "
    # track.start_with?(entry) || entry.to_i - 1 == songs.index(track)
-  if songs.include?(entry) || songs.index(track).to_s  == entry.to_i
-      binding.pry
-      return track
+  #if songs.include?(entry) || songs.index(track).to_s  == entry.to_i
+   #   binding.pry
+   #   return track
     end  
   #binding.pry
   end
@@ -42,11 +42,11 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  entry = gets.strip
-  #binding.pry
-  output = find_song(entry,songs) #method defined above
-  if output
-    puts "Playing #{output}"
+  song_to_play = gets.chomp
+  if (1..9).to_a.include?(song_to_play.to_i)
+    puts "Playing #{songs[song_to_play.to_i - 1]}"
+  elsif songs.include?(song_to_play)
+    puts "Playing #{song_to_play}"
   else
     puts "Invalid input, please try again"
   end
