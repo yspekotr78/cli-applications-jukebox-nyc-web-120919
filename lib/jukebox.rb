@@ -65,7 +65,7 @@ end
 def run(array)
   puts "Please enter a command:"
   entry = gets.strip
-  #if entry == "play"
+  if entry == "play"
     play(array)
- # end
+  end
 end
