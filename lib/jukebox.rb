@@ -59,7 +59,7 @@ def list(songs)
 end
   
 def exit_jukebox
-  pus "Goodbye"
+  puts "Goodbye"
 end
 
 def run(array)
