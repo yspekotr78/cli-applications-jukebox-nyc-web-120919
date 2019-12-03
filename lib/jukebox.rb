@@ -38,11 +38,8 @@ def play(songs)
   counter = 0
   #output = ""
   
-  if output.include?("Playing")
-    puts output
-  elsif entry == "list"
-    #list(array)
-    play(songs)
+  if output
+    puts "Playing #{output}"
   else
     puts "Invalid input, please try again"
   end
