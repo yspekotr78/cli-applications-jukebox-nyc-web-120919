@@ -71,5 +71,7 @@ def run(array)
     exit_jukebox
   elsif entry == "list"
     list(array)
-  end
+  elsif entry == "help"
+   help
+ end
 end
