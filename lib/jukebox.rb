@@ -33,27 +33,22 @@ def play(songs)
   puts "Please enter a song name or number:"
   entry = gets.strip
   #binding.pry
-  found = songs.find do |track|
+  output = songs.find do |track|
     track.start_with?(input) || input.to_i - 1 == songs.index(track)
   counter = 0
-  output = ""
-  while counter < array.length do
-    if entry.to_i == counter + 1 || entry == array[counter]
-      output = "Playing #{array[counter]}" 
-    end
-    counter +=1
-  end
+  #output = ""
+  
   if output.include?("Playing")
     puts output
   elsif entry == "list"
     #list(array)
-    play(array)
+    play(songs)
   else
     puts "Invalid input, please try again"
   end
 end
 
-def list(array)
+def list(songs)
 
 end
   
