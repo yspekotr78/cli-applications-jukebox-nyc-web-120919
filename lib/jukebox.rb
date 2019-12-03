@@ -28,15 +28,17 @@ def help
   puts "- exit : exits this program"
 end
 
-def find_song()
+def find_song(find_track,songs)
+  songs.find do |track|
+    track.start_with?(entry) || entry.to_i - 1 == songs.index(track)
+  end
+end
 
 def play(songs)
   puts "Please enter a song name or number:"
   entry = gets.strip
   #binding.pry
-  output = songs.find do |track|
-    track.start_with?(entry) || entry.to_i - 1 == songs.index(track)
-  end
+  output = find_song(entry,songs) #method defined above
   if output
     puts "Playing #{output}"
   else
