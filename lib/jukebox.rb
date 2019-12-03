@@ -28,7 +28,7 @@ def help
   puts "- exit : exits this program"
 end
 
-def find_song(find_track,songs)
+def find_song(entry,songs)
   songs.find do |track|
     track.start_with?(entry) || entry.to_i - 1 == songs.index(track)
   end
