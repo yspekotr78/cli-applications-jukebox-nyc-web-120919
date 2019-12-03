@@ -67,5 +67,7 @@ def run(array)
   entry = gets.strip
   if entry == "play"
     play(array)
+  elsif entry == "exit"
+    exit_jukebox
   end
 end
