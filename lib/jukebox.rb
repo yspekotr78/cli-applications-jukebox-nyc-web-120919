@@ -33,7 +33,7 @@ def play(songs)
   puts "Please enter a song name or number:"
   entry = gets.strip
   #binding.pry
-  songs.find do |track|
+  found = songs.find do |track|
     track.start_with?(input) || input.to_i - 1 == songs.index(track)
   counter = 0
   output = ""
