@@ -69,5 +69,7 @@ def run(array)
     play(array)
   elsif entry == "exit"
     exit_jukebox
+  elsif entry == "list"
+    list(array)
   end
 end
