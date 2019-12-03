@@ -33,6 +33,7 @@ def find_song(entry,songs)
     # "song title                   track #      index "
    # track.start_with?(entry) || entry.to_i - 1 == songs.index(track)
   if songs.include?(entry) || track.to_i + 1 == entry
+      binding.pry
       return track
     end  
   #binding.pry
