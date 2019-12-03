@@ -58,6 +58,9 @@ def list(songs)
   end
 end
   
+def exit_jukebox
+  pus "Goodbye"
+end
 
 def run(array)
   puts "Please enter a command:"
